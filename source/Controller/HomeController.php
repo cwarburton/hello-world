@@ -36,4 +36,13 @@ class HomeController
 
         return $res->withStatus(200);
     }
+
+    public function fuckoff(Request $req, Response $res, $args)
+    {
+        $name = $args['name'];
+
+        $res->getBody()->write("Fuck off, $name");
+
+        return $res->withStatus(200);
+    }
 }
